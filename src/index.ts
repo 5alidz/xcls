@@ -1,25 +1,24 @@
 export type ClassName = string | null | undefined;
+export type ClassNameArg = ClassName | [boolean, ClassName, ClassName?];
 
-export default function cls(
-  ...classesToMerge: (ClassName | [boolean, ClassName, ClassName?])[]
-): string {
-  const classes: string[] = [];
+export default function cls(...classesToMerge: ClassNameArg[]): string {
+  let result = '';
   for (let i = 0; i < classesToMerge.length; i++) {
     const current = classesToMerge[i];
+    const padding = ' ';
+    if (current && typeof current === 'string') {
+      result += current.trim() + padding;
+      continue;
+    }
     if (Array.isArray(current)) {
-      const [condition, className, fallbackClassName] = current;
+      const [condition, className, fallback] = current;
       if (condition && className && typeof className === 'string') {
-        classes.push(className.trim());
-      } else if (
-        !condition &&
-        fallbackClassName &&
-        typeof fallbackClassName === 'string'
-      ) {
-        classes.push(fallbackClassName.trim());
+        result += className.trim() + padding;
       }
-    } else if (typeof current === 'string' && current.length > 0) {
-      classes.push(current.trim());
+      if (!condition && fallback && typeof fallback === 'string') {
+        result += fallback.trim() + padding;
+      }
     }
   }
-  return classes.join(' ');
+  return result.trim();
 }
