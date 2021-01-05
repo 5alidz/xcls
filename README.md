@@ -1,7 +1,6 @@
 ## xcls
 
-this package is made to merge classnames with conditions, i'm aware of the very popular package `classnames` but i don't
-like how it handles condition, so this is was born
+merge html classnames with conditions
 
 ## Install
 
