@@ -2,8 +2,6 @@
 
 ```
 npm i xcls
-or
-yarn add xcls
 ```
 
 ## Usage
