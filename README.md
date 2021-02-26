@@ -1,7 +1,3 @@
-## xcls
-
-merge html classnames with conditions
-
 ## Install
 
 ```
