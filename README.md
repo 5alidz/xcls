@@ -6,11 +6,7 @@ merge html classnames with conditions
 
 ```
 npm i xcls
-```
-
 or
-
-```
 yarn add xcls
 ```
 
