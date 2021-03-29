@@ -1,7 +1,16 @@
+# xcls
+Declartive classNames merging utility
+
+[![GitHub license](https://img.shields.io/github/license/5alidz/xcls)](https://github.com/5alidz/xcls/blob/master/LICENSE) ![Minzipped size](https://img.shields.io/bundlephobia/minzip/xcls.svg)
+
 ## Install
 
-```
+```sh
+# npm
 npm i xcls
+
+# yarn
+yarn add xcls
 ```
 
 ## Usage
